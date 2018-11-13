@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>GKhair copy</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="css/custom.css">
+    </head>
+    <body>
+<!--        code for nav bar gkhair-->
+        <div class="container-fluid navbar-shadow">
+                <div class="navbar-main">
+<!--                    left area of our navbar-->
+                    <div class="left-area"  >
+                             <a href="#" class="card-link navbar-gklogo"><img src="images/logo.png" alt="" ></a>
+<!--                        language selector-->
+                        <div class="dropdown lang-select">
+                            <a onclick="toggle_lang_selector()" class="text-uppercase dropdown-toggle" >English</a>
+                                <ul class="lang-list shadow text-uppercase custom-select-sm list-unstyled " id="lang_toggler">
+                                    <li class="list-group-item ">English</li>
+                                    <li class="list-group-item ">Urdu</li>
+                                    <li class="list-group-item ">Spanish</li>
+                                    <li class="list-group-item ">French</li>
+                                    <li class="list-group-item ">Arabic</li>
+                                </ul>
+                        </div>
+                    </div>
+<!--                    right side area-->
+                    <div class="right-side-area ">
+<!--                        cart area-->
+                        <div class="user-credits ">
+                            <a href="#">
+                                <i class="fas fa-shopping-bag"></i>
+                            </a>
+                            <div class="vertical-line d-none-on-sm d-none-on-xs "></div>
+                            <div class="incart-amounts flexbox d-none-on-sm d-none-on-xs">
+                                <ul class="flexbox list-unstyled">
+                                    <li>Total Amount</li>
+                                    <li>£237.545 GBP</li>
+                                </ul>
+                            </div>
+                        </div>
+<!--                        icons area-->
+                            <ul class="nav-icons list-unstyled" >
+                                <li class="d-none-on-sm d-none-on-xs">
+                                    <a href="#" class="alert-link"><i class="fas fa-user-friends"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="alert-link"> <i class="fa fa-search " aria-hidden="true"></i></a>
+                                </li>
+                                <li class="d-none-on-sm d-none-on-xs">
+                                    <a href="#" class="alert-link"> <i class="fas fa-th"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="alert-link ">
+                                        <img src="images/no-profile-avatar-f.png" class=" " alt="">
+                                    </a>
+                                </li>
+                            </ul>
+<!--                       side menu data -->
+                            <a href="#" onclick="menu_open()" class="alert-link menu-opener">☰</a>
+                        
+                    </div>
+                    <div class="my-sidebar-area" id="mysidebar">
+<!--                        Sidebar header-->
+                        <div class="my-sidebar-header">
+                                <button onclick="menu_close()" class="btn-link" aria-label="Close">&times;</button>
+                        </div>
+                        <!--my sidebar body-->
+                        <div class="my-sidebar-body">
+                            <!--div was made positioned relative so that we can make its content apear in there relative positiones-->
+                            <ul class="flexbox my-sidebar-list list-unstyled text-uppercase" >
+                                <li>
+                                    <a href="#" class="w3-bar-item w3-button">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="w3-bar-item w3-button">Products</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="w3-bar-item w3-button">juvexin</a>
+                                </li>                           
+                            </ul>
+                        </div>  
+                    </div> 
+                </div>
+        </div>
+<!--        /*header completes here and banner section starts here*/-->
+        <div class="">
+            <div class="container-fluid banner-body">
+                <div class=" models-img-container">
+                    <span class="products-name miami-bombshell text-uppercase"><p>Miami</p><p>Bombshell</p></span>
+                    <span class="products-name resistant text-uppercase"><p>Resistant</p></span>
+                    <span class="products-name the-best text-uppercase"><p>The</p><p>Best</p></span>
+
+                    <span class="text-uppercase background-main-text">GKhair</span>
+                    <img src="images/model_1_line.png" atl="" class="img-fluid model-1">
+                    <img src="images/model_2_line.png" atl="" class="img-fluid model-2">
+                    <img src="images/model_3_line.png" atl="" class="img-fluid model-3">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+        
+        </div>
+        
+<script>
+    function toggle_lang_selector(){
+        var toggle = document.getElementById("lang_toggler");
+        if(toggle.style.display === "none"){
+            toggle.style.display = "block";
+        }
+        else{
+            toggle.style.display = "none";
+        }
+    }
+    
+    function menu_open() {
+            document.getElementById("mysidebar").style.display = "block";
+    }
+    function menu_close() {
+        document.getElementById("mysidebar").style.display = "none";
+    }
+</script>
+    </body>
+</html>

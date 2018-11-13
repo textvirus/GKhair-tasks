@@ -1,0 +1,403 @@
+.testing-border{
+    /*    class was created just to test borders of a div*/
+    border: 3px solid #bfa47d;
+/*    border-top:0; */
+}
+@font-face{
+    font-family: 'Open Sans', sans-serif;
+    src : url(fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+    font-family: 'Sharp sans', sans-serif;
+    src: url(fonts/Sharp Sans No2 Book.otf);
+}
+body{
+    font-family: 'Open Sans',sans-serif;
+    box-sizing: border-box;
+    /*    these properties are common amoung all body so we put them here in body*/
+}
+.navbar-shadow{
+    box-shadow: 0px 1px 5px 0px #ebebeb;
+}
+.flexbox{
+    display: flex;
+}
+/*
+.gk-navbar{
+    height: 70px;
+}
+*/
+.navbar-main{
+    display: flex;
+    justify-content: space-between;
+}
+.left-area{
+    display: flex;
+}
+.navbar-gklogo{
+    height: 70px;
+}
+/*left area css including logo and language select*/
+.navbar-gklogo img{
+    width: 70px;
+    margin-left: 15px;
+}
+.lang-select{
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 0 30px;
+}
+.lang-select a:first-child{
+    font-size: 12px;
+    font-weight: 400;
+    padding:10px;
+}
+.lang-select a:first-child:hover{
+    cursor:pointer;
+    color:#FF9D0E;
+    font-weight: 600;
+}
+.lang-list{
+    display: none;
+    position: absolute;
+    top: 100%;
+    padding: 0;
+    width: 400px;
+    left: 0;
+    min-height: 216px;
+    max-height: 500px;
+    background: transparent;
+    overflow-y: auto;
+}
+
+.lang-list li{
+    cursor: pointer;
+}
+.lang-list li:hover{
+    box-shadow: none !important;
+    color: #ffa016;
+}
+/*right side of the nav bar starts here*/
+
+.right-side-area{
+    display: flex;
+    margin-right: 30px;
+    align-items: center;
+}
+/*lets divide right side area into further sections*/ 
+/*first section is user-credits classed div it contains user related informations*/
+.user-credits{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background: #ECECEC;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+.user-credits i{
+    font-size: 30px;
+    color: #9b9b9b;
+    text-decoration: none;
+    margin-right: 10px;
+}
+/*vertical line is just an empty div with left border and it apears as a line as a divider*/
+.vertical-line{
+    height: 25px;
+    border-left: 1px solid #9b9b9b;
+    margin-right: 10px;
+}
+/*2nd section starts here with user's cart's credit information*/
+.incart-amounts{
+    font-size: 12px;
+}
+.incart-amounts li{
+    color: #9b9b9b;
+    font-size: 0.9em;
+    line-height: 20px;
+}
+.incart-amounts li:nth-child(2){
+    font-weight: bold;
+    color: #000000;
+    cursor: pointer;
+
+}
+.incart-amounts ul{
+    text-decoration: none;
+    align-items: center;
+    flex-flow: column wrap;
+    margin: 0;
+    padding: 0;
+    
+}
+/*icons related to user were handled here*/
+.nav-icons{
+    display: flex;
+}
+.nav-icons{
+    margin: 0;
+/*    padding: 0;*/
+}
+.nav-icons li{
+    margin-left: 15px;
+}
+.nav-icons li a{
+    color: #9b9b9b;
+    text-decoration: none;
+}
+.nav-icons li a img{
+    width: 25px;
+    border-radius: 50%;
+}
+/*menu related styling starts here*/
+.menu-opener{
+    margin-left: 15px;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #9b9b9b;
+    text-decoration: none;
+}
+.menu-opener:hover{
+    text-decoration: none;
+    color: black;
+}
+/*    sidebar area is styled here*/
+.my-sidebar-area{
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 50vw;
+    right: 0;
+    top:0;
+    background: #ffffff;
+    background-clip: padding-box;
+    box-shadow: 0px 1px 0px 2px #ebebeb;
+    border-radius: 0 0 0 50%;
+    border-left: 30px solid rgba(241, 240, 239, 0.35);
+    animation-name: sidebar-slidein;
+    animation-duration: 1s;
+}
+.my-sidebar-header{
+    display: flex;
+    flex-direction: row-reverse;   
+}
+.my-sidebar-header button{
+    margin: 10px 40px;
+    border:none;
+    font-size: 3em;
+    color: #9b9b9b;
+    cursor: pointer;
+    font-weight: 300;
+    
+}
+.my-sidebar-header button:hover{
+    color: black;
+    text-decoration: none;
+}
+.my-sidebar-body{
+    position: relative;
+    margin-right: 40px;
+}
+.my-sidebar-list{
+    flex-flow: column wrap;
+    text-align: right;
+    line-height: 2em;
+}
+.my-sidebar-body a{
+    color: #9b9b9b; 
+}
+.my-sidebar-body a:hover{
+    color: #ffa016;
+    text-decoration: none;
+}
+.my-sidebar-list li a{
+    animation-name: sidebar-slidein;
+    animation-delay: 3s;
+    
+}
+/*header completes here*/
+/*banner section*/
+.banner-body{
+    display: flex;
+    position: relative;
+    background-image: url("../images/background.jpg");
+    height: 35vw;
+    align-items: center;
+    overflow: hidden;
+}
+.background-main-text{
+    position: absolute;
+    top: 10%;
+    font-family: 'Sharp sans', sans-serif;
+    font-size: 10vw;
+    font-weight: bold;
+    opacity: 0.1;
+    width: 100%;
+    
+/*
+    z-index: 0;
+    align-self: center;
+*/
+    text-align: center;
+}
+.models-img-container{
+    display: flex;
+    position: relative;
+    flex-basis: 100%;
+    height: 100%;
+    align-self: center;
+}
+.model-1{
+    position: absolute;
+    left: 29%;
+    bottom: 0;
+    height: 80%;
+    z-index: 1;
+}
+.model-2{
+    position: absolute;
+    left: 40%;
+    bottom: 0;
+    height: 80%;
+    z-index: 1;
+}
+
+.model-3{
+    position: absolute;
+    left: 56%;
+    bottom: 0;
+    height: 80%;
+    z-index: 1;
+}
+.products-name{
+    position: relative;
+    letter-spacing: 3px;
+    font-size: 8px;
+    font-weight: bold;
+    line-height: 12px;
+}
+.products-name p{
+    margin:0;
+}
+.miami-bombshell{
+    align-self: center;
+    left: 40%;
+    bottom: 23%;
+}
+.resistant{
+    align-self: center;
+    left: 36%;
+    bottom: 10%;
+}
+.the-best{
+    align-self: center;
+    left: 58%;
+    bottom: 13%
+}
+Grid styling starts here
+
+/*media quries starts here*/
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+   .d-none-on-sm{
+        display: none;
+    }
+    .hide-div{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 767px){
+     
+    .navbar-gklogo img{
+        margin:0;
+        padding: 0;
+    }
+    .lang-select{
+        margin: 0;
+        padding: 5px;
+        font-size: 12px;
+    }
+    .d-none-on-xs{
+        display: none;
+    }
+    .right-side-area{
+        margin: 0;
+    }
+    .hide-div{
+        display: none;
+    }
+    .lang-list li{
+        right: 5px;
+    }
+    .lang-select a:first-child{
+        padding: 0 5px;
+    }
+    .user-credits i{
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    .navbar-gklogo img{
+        margin:0;
+        padding: 0;
+    }
+    .navbar-shadow{
+        padding:0;
+    }
+    .lang-select{
+        margin: 0;
+        padding: 5px;
+    }
+    .right-side-area{
+        margin: 5px;
+    }
+    .d-none-on-xs{
+        display: none;
+    }
+    .user-credits i{
+        margin: 0;
+    }
+    .hide-div{
+        display: none;
+    }
+    .lang-list li{
+        right: 0;
+    }
+    .lang-select a:first-child{
+        padding: 0;
+        font-size: 11px;
+    }
+/*
+    .nav-icons li{
+        margin-left: 5px;
+    }
+    .menu-opener{
+        margin-left: 5px; 
+        margin-left: 0; 
+
+    }
+*/
+    
+}
+
+
+@keyframes sidebar-slidein{
+    from {
+    width: 0%; 
+  }
+/*
+  to {
+    width: 435px%;
+  }
+*/
+}
+@keyframes text-slidein{
+    0%{
+        right: 0%;
+    }
+    100%{
+        right:100%;
+    }
+}
