@@ -295,7 +295,11 @@ body{
     left: 59%;
     bottom: 13%
 }
-Grid styling starts here
+/*Grid styling starts here*/
+.grid-wraper{
+    display: flex;
+    
+}
 
 /*media quries starts here*/
 @media only screen and (min-width: 768px) and (max-width: 1023px){
