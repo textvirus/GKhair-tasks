@@ -11,6 +11,10 @@
     font-family: 'Sharp sans', sans-serif;
     src: url(fonts/Sharp Sans No2 Book.otf);
 }
+@font-face {
+    font-family: 'Gilroy-Light', sans-serif;
+    src: url(fonts/Gilroy-Light.otf);
+}
 body{
     font-family: 'Open Sans',sans-serif;
     box-sizing: border-box;
@@ -63,12 +67,14 @@ body{
     position: absolute;
     top: 100%;
     padding: 0;
-    width: 400px;
+    width: 40vw;
     left: 0;
     min-height: 216px;
-    max-height: 500px;
+    height: auto;
     background: transparent;
     overflow-y: auto;
+    z-index: 2;
+
 }
 
 .lang-list li{
@@ -120,7 +126,6 @@ body{
     font-weight: bold;
     color: #000000;
     cursor: pointer;
-
 }
 .incart-amounts ul{
     text-decoration: none;
@@ -128,7 +133,6 @@ body{
     flex-flow: column wrap;
     margin: 0;
     padding: 0;
-    
 }
 /*icons related to user were handled here*/
 .nav-icons{
@@ -167,6 +171,7 @@ body{
     display: none;
     position: fixed;
     height: 100%;
+    max-height: 70%;
     width: 50vw;
     right: 0;
     top:0;
@@ -177,6 +182,7 @@ body{
     border-left: 30px solid rgba(241, 240, 239, 0.35);
     animation-name: sidebar-slidein;
     animation-duration: 1s;
+    z-index: 2;
 }
 .my-sidebar-header{
     display: flex;
@@ -189,7 +195,6 @@ body{
     color: #9b9b9b;
     cursor: pointer;
     font-weight: 300;
-    
 }
 .my-sidebar-header button:hover{
     color: black;
@@ -214,7 +219,6 @@ body{
 .my-sidebar-list li a{
     animation-name: sidebar-slidein;
     animation-delay: 3s;
-    
 }
 /*header completes here*/
 /*banner section*/
@@ -222,15 +226,15 @@ body{
     display: flex;
     position: relative;
     background-image: url("../images/background.jpg");
-    height: 35vw;
+    height: 40vw;
     align-items: center;
     overflow: hidden;
 }
 .background-main-text{
     position: absolute;
-    top: 10%;
+    bottom: 48%;
     font-family: 'Sharp sans', sans-serif;
-    font-size: 10vw;
+    font-size: 17vw;
     font-weight: bold;
     opacity: 0.1;
     width: 100%;
@@ -250,24 +254,29 @@ body{
 }
 .model-1{
     position: absolute;
-    left: 29%;
+    left: 14%;
     bottom: 0;
-    height: 80%;
+    height: 100%;
     z-index: 1;
 }
+.shapes-n-miami-text{
+    position: absolute;
+    align-self: center;
+}
+
 .model-2{
     position: absolute;
-    left: 40%;
+    left: 35%;
     bottom: 0;
-    height: 80%;
+    height: 100%;
     z-index: 1;
 }
 
 .model-3{
     position: absolute;
-    left: 56%;
+    left: 65%;
     bottom: 0;
-    height: 80%;
+    height: 100%;
     z-index: 1;
 }
 .products-name{
@@ -280,17 +289,19 @@ body{
 .products-name p{
     margin:0;
 }
-.miami-bombshell{
+/*
+.miami-bombshell-banner-text{
     align-self: center;
     left: 40%;
     bottom: 23%;
 }
-.resistant{
+*/
+.resistant-banner-text{
     align-self: center;
     left: 37%;
     bottom: 10%;
 }
-.the-best{
+.the-best-banner-text{
     align-self: center;
     left: 59%;
     bottom: 13%
@@ -298,7 +309,133 @@ body{
 /*Grid styling starts here*/
 .grid-wraper{
     display: flex;
-    
+    flex-flow: column nowrap;
+    padding-bottom: 10%;
+    border-bottom: 1px solid #d1d1d2;
+}
+.grid-header{
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    margin-top: 10%;
+    letter-spacing: 5px;
+    font-size: 18px;
+    color: #FF9D0E;
+    font-family: 'Gilroy-Light', sans-serif;
+}
+.grid-content-wraper{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin-top:5%;
+    height: 100%;
+}
+
+.grid-content{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    flex-basis: 20%;
+    font-size: 14px;
+}
+.grid-content div{
+    margin-bottom: 10%;
+}
+.logo{
+/*    align-self: flex-end;   */
+}
+.resistant{
+    margin-top: 29px;
+}
+.the-best{
+    margin-top: 14px;
+}
+.btn-knowmore{
+/*    border-radius: 25px;*/
+    background: transparent;
+    font-size: 12px;
+    border: 1px solid black;
+    max-width: 150px;
+    min-width: 120px;
+    max-height: 40px;
+    align-self: center;
+}
+
+/*Call to Action motivation banner area starts here*/
+.CTA-wraper{
+    display: flex;
+    position: relative;
+    padding-bottom: 2%;
+}
+/*Call to Action written content*/
+.cta-written-content{
+/*
+    display: flex;
+    flex-flow: column nowrap;
+*/
+    margin-top:10%;
+    flex-basis: 50%;
+}
+.cta-written-content p:first-child{
+    letter-spacing: 5px;
+    font-size: 1em;
+    font-weight: bold;
+}
+.cta-written-content p:nth-child(2){
+    font-size: 1em;
+    font-weight: 300;
+}
+.CTA-btn-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top:10%;
+}
+.btn-booktreatment{
+    background: #ffa016;
+    font-size: 12px;
+    color: #fff;
+    margin-left: 5px;
+}
+.learnmore-button{
+    background: transparent;
+    font-size: 12px;
+    color: #fff;
+    margin-left: 5px;
+    border: 1px solid white;
+}
+
+/*got out of cta written content*/
+.CTA-model{
+    position: absolute;
+    flex-basis: 50%;
+    height: auto;
+    width: 22%;
+    bottom: 0;
+    right: 8%;
+    z-index: 1;
+   
+}
+/*.CTA-model img{
+    position: absolute;
+    bottom: 0;
+}*/
+/*a banner of pupel color is styled here*/
+.purpel-div{
+    position: relative;
+    background: #592c82;
+    width: 100%;
+    height: 120px;
+   /* bottom: 30px;*/
+}
+.btn-banner{
+    display: flex;
+    position: absolute;
+    flex-basis: 50%;
+    margin-left: 5%;
+    width: 50%;
+    justify-content: space-evenly;
+    top: 45px;
+
 }
 
 /*media quries starts here*/
@@ -309,6 +446,40 @@ body{
     .hide-div{
         display: none;
     }
+/*    QURIES FOR BANNER*/
+    .banner-body{
+        height: 50vw;
+    }
+    .background-main-text{
+        bottom: 53%;
+        font-size: 20vw;
+    }
+    .model-1{
+        left: 3%;
+        height: 105%;
+    }
+    .model-2{
+        left: 31%;
+        
+    }
+/*    quries for grid section*/
+    .resistant button{
+        
+    }
+    
+/*    quries for CTA section*/
+    .cta-written-content{
+        flex-basis: 75%;
+        font-size: 14px;
+        margin-bottom: 5%;
+    }
+    .cta-written-content p{
+        letter-spacing: 0px !important;
+    }
+   /* .CTA-model img{
+        position: absolute;
+        bottom: 0;
+    }*/
 }
 
 @media only screen and (min-width: 421px) and (max-width: 767px){
@@ -340,6 +511,80 @@ body{
     .user-credits i{
         margin: 0;
     }
+/*    quries for banner images*/
+    .banner-body{
+        height: 65vw;
+    }
+    .background-main-text{
+        bottom: 55%;
+        font-size: 25vw;
+    }
+    .model-1{
+        height: 110%;
+        left: 34%;
+        background:  url(images/model_1.png) no-repeat;
+        box-sizing: border-box;
+    }
+    .miami-bombshell-banner-text {
+        left: 62%;
+        bottom: 45%;
+    }
+    .model-2{
+        left: -12%;
+    }
+    .model-3{
+        left: 70%
+    }
+/*    grid contents quries here*/
+     .grid-header p{
+        margin: 0;
+    }
+    .grid-content{
+        font-size: 12px;
+    }
+    .grid-content-wraper{
+        flex-flow: column wrap;
+        margin: 0;
+    }
+    .logo{
+        margin-top: 35px;
+    }
+    .grid-content div{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2%;
+    }
+/*    CTA SECTION HERE*/
+    .cta-written-content{
+        font-size: 12px;
+        flex-basis: 80%;
+        margin-bottom: 10%;
+    }
+    .cta-written-content p{
+        letter-spacing: 0px !important;
+    }
+    .CTA-model{
+        width:33%;
+        right: 0;
+    }
+    .CTA-model img{
+        
+    }
+    .btn-banner {
+        flex-flow: column wrap;
+        margin-left: 0;
+        top: 25px;
+        left: 14vw;
+    }
+    .btn-banner button{
+        margin-bottom: 10px;
+    }
+    .purpel-div{
+        display: flex;
+        /*bottom: 0px;*/
+        justify-content: center;
+
+    }
 }
 
 @media only screen and (max-width: 420px){
@@ -366,6 +611,9 @@ body{
     .hide-div{
         display: none;
     }
+    .lang-list{
+        width: 60vw;
+    }
     .lang-list li{
         right: 0;
     }
@@ -373,17 +621,96 @@ body{
         padding: 0;
         font-size: 11px;
     }
-/*
-    .nav-icons li{
-        margin-left: 5px;
+/*    SIDEBAR QURIES*/
+    .my-sidebar-body{
+        margin-right: 5px;
     }
-    .menu-opener{
-        margin-left: 5px; 
-        margin-left: 0; 
-
+    .my-sidebar-header button{
+        margin: 0;
     }
-*/
+    .my-sidebar-area{
+        width: 85vw;
+}
+/*    BANNER QURIES HERE*/
+    .banner-body{
+        height: 65vw;
+    }
+    .model-1{
+        height: 110%;
+        left: 33%;
+        background:  url(images/model_1.png) no-repeat;
+        box-sizing: border-box;
+    }
+    .miami-bombshell-banner-text {
+        left: 62%;
+        bottom: 45%;
+        font-size: 5px;
+        line-height: 6px;
+    }
+    .model-2{
+        left: -16%;
+    }
+    .resistant-banner-text{
+        bottom: 45%;
+        left:0 ;
+        font-size: 5px;
+    }
+    .model-3{
+        left: 70%
+    }
+    .the-best-banner-text{
+        bottom: 25%;
+        left: 34%;
+        font-size: 5px;
+        line-height: 5px;
+    }
+/*    grid contents quries here*/
+    .grid-header p{
+        margin: 0;
+    }
+    .grid-content{
+        font-size: 12px;
+    }
+    .grid-content-wraper{
+        flex-flow: column wrap;
+        margin: 0;
+    }
+    .logo{
+        margin-top: 35px;
+    }
+    .grid-content div{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2%;
+    }
+/*    CTA QURIES HERE*/
+    .cta-written-content{
+        font-size: 12px;
+        flex-basis: 100%;
+        margin-bottom: 10%;
+    }
+    .cta-written-content p{
+        letter-spacing: 0px !important;
+    }
+    .CTA-model img{
+        display: none;
+    }
+    .btn-banner {
+        flex-flow: column wrap;
+        align-content: space-between;
+        width: 90%;
+        margin-left: 0;
+        top: 25px;
+    }
     
+    .btn-banner button{
+        margin-bottom: 10px;
+    }
+    .purpel-div{
+        display: flex;
+        justify-content: center;
+        bottom: 0px;
+    }
 }
 
 
