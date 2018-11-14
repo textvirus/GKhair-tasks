@@ -238,11 +238,6 @@ body{
     font-weight: bold;
     opacity: 0.1;
     width: 100%;
-    
-/*
-    z-index: 0;
-    align-self: center;
-*/
     text-align: center;
 }
 .models-img-container{
@@ -262,8 +257,20 @@ body{
 .shapes-n-miami-text{
     position: absolute;
     align-self: center;
-}
 
+}
+.miami-bombshell-banner-text{
+    top: 100px;
+}
+.shape1{
+    position: absolute;
+    display: inline-block;
+    left: 20%;
+    height: 100px;
+    width: 100%;
+    border-top: 1px solid black;
+    border-left: 1px solid black; 
+}
 .model-2{
     position: absolute;
     left: 35%;
