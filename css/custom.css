@@ -231,10 +231,9 @@ body{
     overflow: hidden;
 }
 .background-main-text{
-    position: absolute;
-    bottom: 48%;
-    font-family: 'Sharp sans', sans-serif;
     font-size: 17vw;
+    line-height: 35vh;    
+    font-family: 'Sharp sans', sans-serif;
     font-weight: bold;
     opacity: 0.1;
     width: 100%;
@@ -256,20 +255,56 @@ body{
 }
 .shapes-n-miami-text{
     position: absolute;
-    align-self: center;
-
+    top: 4%;
+    left: 17%;;
 }
 .miami-bombshell-banner-text{
-    top: 100px;
+    left: 170%;
+    bottom: 10px;
 }
-.shape1{
+.shape1-borders-only{
     position: absolute;
     display: inline-block;
     left: 20%;
     height: 100px;
-    width: 100%;
+    width: 145%;
+/*    width: 210%;*/
     border-top: 1px solid black;
     border-left: 1px solid black; 
+}
+.shape1-straingt{
+    position: absolute;
+    display: inline-block;
+    top: 100px;
+    left: 20%;
+    height: auto;
+    width: 30%;
+    border-top: 1px solid black;
+    z-index: 1;
+
+}
+.shape1-dot{
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    top: 98px;
+    height: 5px;
+    width: 5px;
+    background: black;
+    border-radius: 50%;
+    z-index: 1;
+
+}
+.resistant-shape-text{
+    position: absolute;
+    align-self: center;
+/*
+    top: 7%;
+    left: 8%;
+*/
+    top: 4%;
+    left: 40%;
+    z-index: 1;
 }
 .model-2{
     position: absolute;
@@ -278,13 +313,65 @@ body{
     height: 100%;
     z-index: 1;
 }
-
+.shape2-borders-only{
+    position: absolute;
+    display: inline-block;
+    top: 10px;
+    left: 40%;
+    height: 100px;
+    width: 70%;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+.shape2-dot{
+    position: absolute;
+    display: inline-block;
+    left: 105%;
+    top: 107px;
+    height: 5px;
+    width: 5px;
+    background: black;
+    border-radius: 50%;
+}
+.resistant-banner-text{
+/*    align-self: center;*/
+}
 .model-3{
     position: absolute;
     left: 65%;
     bottom: 0;
-    height: 100%;
+    height: 120%;
     z-index: 1;
+}
+.thebest-shape-text{
+    position: absolute;
+    right: 15%;
+    z-index: 1;
+}
+.the-best-banner-text{
+    align-self: center;
+    left: 59%;
+    bottom: 13%
+}
+.shape3-borders-only{
+    position: absolute;
+    display: inline-block;
+    top: 29px;
+    left: 17%;
+    height: 100px;
+    width: 90%;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+.shape3-dot{
+    position: absolute;
+    display: inline-block;
+    left: 10%;
+    top: 126px;
+    height: 5px;
+    width: 5px;
+    background: black;
+    border-radius: 50%;
 }
 .products-name{
     position: relative;
@@ -303,16 +390,8 @@ body{
     bottom: 23%;
 }
 */
-.resistant-banner-text{
-    align-self: center;
-    left: 37%;
-    bottom: 10%;
-}
-.the-best-banner-text{
-    align-self: center;
-    left: 59%;
-    bottom: 13%
-}
+
+
 /*Grid styling starts here*/
 .grid-wraper{
     display: flex;
@@ -445,7 +524,9 @@ body{
 
 }
 
-/*media quries starts here*/
+/*MEDIA QURIES STARTS HERE*/
+/*MEDIA QURIES STARTS HERE*/
+/*MEDIA QURIES STARTS HERE*/
 @media only screen and (min-width: 768px) and (max-width: 1023px){
    .d-none-on-sm{
         display: none;
@@ -462,12 +543,44 @@ body{
         font-size: 20vw;
     }
     .model-1{
-        left: 3%;
-        height: 105%;
+        left: 6%;
+    }
+    .shapes-n-miami-text{
+        top: 7%;
+        left: 8%;
     }
     .model-2{
         left: 31%;
+        height: 98%;
+    }
+    .resistant-shape-text{
+        left: 36%;
         
+    }
+    .shape2-borders-only {
+        width: 45%;
+        left: 60%;
+
+    }
+    .model-3{
+        left: 65%;
+        height: 117%;
+    }
+    .thebest-shape-text{
+        right: 25%;
+
+    }
+    .the-best-banner-text{
+        left: 0;
+        top: 7px;
+    }
+    .shape3-borders-only{
+        border-right: none;
+        border-left: 1px solid black;
+    }
+    .shape3-dot{
+        left: 95%;
+
     }
 /*    quries for grid section*/
     .resistant button{
@@ -483,10 +596,6 @@ body{
     .cta-written-content p{
         letter-spacing: 0px !important;
     }
-   /* .CTA-model img{
-        position: absolute;
-        bottom: 0;
-    }*/
 }
 
 @media only screen and (min-width: 421px) and (max-width: 767px){
@@ -526,16 +635,68 @@ body{
         bottom: 55%;
         font-size: 25vw;
     }
+    .products-name{
+        font-size: 8px;
+        line-height: 7px;
+    }
     .model-1{
-        height: 110%;
+        height: 100%;
         left: 34%;
-        background:  url(images/model_1.png) no-repeat;
         box-sizing: border-box;
     }
-    .miami-bombshell-banner-text {
-        left: 62%;
-        bottom: 45%;
+    .shapes-n-miami-text{
+        left: 35%;
     }
+    .shape1-borders-only{
+        width: 100%;
+
+    }
+    .miami-bombshell-banner-text {
+        left: 126%;
+        bottom: 4px;
+    }
+    .model-2{
+        left: -16%;
+        height: 95%;
+
+    }
+    .resistant-shape-text{
+        left: 22%;
+    }
+    .resistant-banner-text{
+        bottom: 45%;
+        left:0 ;
+    }
+    .shape2-borders-only{
+        left: 0;
+        border-right: 1px solid black;
+        border-left: none;
+
+    }
+    .shape2-dot{
+        left: 0;
+    }
+    .model-3{
+        left: 70%
+    }
+    .shape3-borders-only{
+        border-left: 1px solid black;
+        border-right: none;
+        top: 17px;
+        left: 23%;
+        width: 75%;
+    }
+    .shape3-dot{
+        left: 27px;
+        top: 114px;
+    }
+    
+    .the-best-banner-text{
+        top: 4px;
+        left: 0;
+        
+    }
+    
     .model-2{
         left: -12%;
     }
@@ -642,31 +803,62 @@ body{
     .banner-body{
         height: 65vw;
     }
+    .background-main-text{
+        line-height: 10vh;
+    }
     .model-1{
-        height: 110%;
+        height: 100%;
         left: 33%;
-        background:  url(images/model_1.png) no-repeat;
+
         box-sizing: border-box;
     }
+    .shapes-n-miami-text{
+        left: 35%;
+    }
     .miami-bombshell-banner-text {
-        left: 62%;
-        bottom: 45%;
+        bottom: 5px;
         font-size: 5px;
         line-height: 6px;
     }
     .model-2{
         left: -16%;
+        height: 95%;
+
+    }
+    .resistant-shape-text{
+        left: 22%;
     }
     .resistant-banner-text{
         bottom: 45%;
         left:0 ;
         font-size: 5px;
     }
+    .shape2-borders-only{
+        left: 0;
+        border-right: 1px solid black;
+        border-left: none;
+
+    }
+    .shape2-dot{
+        left: 0;
+    }
     .model-3{
         left: 70%
     }
+    .shape3-borders-only{
+        border-left: 1px solid black;
+        border-right: none;
+        top: 17px;
+        left: 23%;
+
+    }
+    .shape3-dot{
+        left: 24px;
+        top: 113px;
+    }
+    
     .the-best-banner-text{
-        bottom: 25%;
+        top: 4px;
         left: 34%;
         font-size: 5px;
         line-height: 5px;
