@@ -219,14 +219,52 @@ body{
 /*banner section*/
 .banner-body{
     display: flex;
+/*    flex-direction: column;*/
     position: relative;
     height: 40vw;
     align-items: center;
     overflow: hidden;
+    background: linear-gradient(to bottom, #dedede 0%,#dcdcdc 21%,#dadada 22%,#dbdbdb 27%,#d8d8d8 34%,#d7d7d7 50%,#d4d4d4 59%,#d0d0d0 100%); 
+}
+.tagline-container{
+    position: absolute;
+    display: flex;
+    background: #f9a01b;
+    height: 80px;
+    width: 80vw;
+    align-self: flex-end;
+    z-index: 2;
+    margin-left: 9vw;
+}
+.tagline-text{
+    flex-basis: 48%;
+    letter-spacing: 0.2em;
+    padding: 10px;
+    margin: 0;
+}
+.tagline-buttons{
+    width: 52%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.tagline-buttons button{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+
+}
+.btn-tag-booktreatment{
+    background: #592c82;
+}
+.btn-tag-knowmore{
+    background: transparent;
+    border: 1px solid black !important;
 }
 .background-main-text{
     font-size: 17vw;
-    line-height: 35vh;    
+    line-height: 60vh;
     font-family: 'Sharp sans', sans-serif;
     font-weight: bold;
     opacity: 0.1;
@@ -630,11 +668,11 @@ body{
         left: 35%;
     }
     .shape1-borders-only{
-        width: 100%;
+        width: 85%;
 
     }
     .miami-bombshell-banner-text {
-        left: 126%;
+        left: 110%;
         bottom: 4px;
     }
     .model-2{
@@ -662,20 +700,23 @@ body{
         left: 70%
     }
     .shape3-borders-only{
+/*        display: none;*/
         border-left: 1px solid black;
         border-right: none;
-        top: 17px;
-        left: 23%;
-        width: 75%;
+        top: 82px;
+        left: -50%;
+        width: 66%;
+        height: 1px;
+
     }
     .shape3-dot{
-        left: 27px;
-        top: 114px;
+        left: 0;
+        top: 80px;
     }
     
     .the-best-banner-text{
-        top: 4px;
-        left: 0;
+        top: 75px;
+        left: -45px;
     }
     
     .model-2{
